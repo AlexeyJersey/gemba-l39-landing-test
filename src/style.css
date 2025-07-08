@@ -507,6 +507,7 @@ a {
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .footer__bg {
@@ -700,7 +701,6 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 93px;
   width: 1200px;
   height: 41px;
 }
