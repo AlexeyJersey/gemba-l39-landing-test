@@ -43,7 +43,7 @@
             <div class="hero__feature"><span class="hero__icon-wrap"><img src="assets/check-circle-broken.svg" alt="" class="hero__icon"></span>No-code or full API integration</div>
           </div>
         </div>
-        <button class="hero__btn">Register your interest</button>
+        <button class="hero__btn" id="scroll-to-contact">Register your interest</button>
       </div>
       <div class="hero__image-wrap">
         <img src="assets/cards-money.png" srcset="assets/cards-money@2x.png 2x" alt="Cards and coins" class="hero__image">
@@ -276,16 +276,16 @@
       <div class="simple-section__title">Click on the link to register interest: <a href="https://link.example" target="_blank">https://link.example</a></div>
     </div>
   </section>
-  <section class="contact-form-section">
+  <section class="contact-form-section" id="contact-form-section">
     <div class="contact-form-bg">
       <img src="assets/gemba-bg.svg" alt="" class="contact-form-bg-svg">
-      <form class="contact-form">
+      <form class="contact-form" action="https://formspree.io/f/mgvyjblb" method="POST">
         <h2 class="contact-form__title">Register Your Interest</h2>
         <div class="contact-form__fields">
           <div class="contact-form__row">
             <div class="contact-form__field">
               <label for="name">Your name</label>
-              <input type="text" id="name" name="name" placeholder="i.e. James Cameron">
+              <input type="text" id="contact-form-name" name="name" placeholder="i.e. James Cameron">
             </div>
             <div class="contact-form__field">
               <label for="company">Company name</label>
@@ -305,7 +305,18 @@
           <div class="contact-form__row contact-form__row--full">
             <div class="contact-form__field contact-form__field--full">
               <label for="clients">Number of clients</label>
-              <input type="text" id="clients" name="clients" placeholder="Number of clients">
+              <select id="clients" name="clients">
+                <option value="" disabled selected>Please select an option</option>
+                <option value="1">1</option>
+                <option value="2-10">2-10</option>
+                <option value="10-50">10-50</option>
+                <option value="50-200">50-200</option>
+                <option value="200-500">200-500</option>
+                <option value="500-1000">500-1000</option>
+                <option value="1000-5000">1000-5000</option>
+                <option value="5000-10000">5000-10000</option>
+                <option value="10000+">10000+</option>
+              </select>
             </div>
           </div>
         </div>
@@ -338,55 +349,55 @@
         </div>
         <div class="footer__section">
           <div class="footer__section-title">Personal</div>
-          <div class="footer__section-link">Personal Account</div>
-          <div class="footer__section-link">Personal Fees</div>
-          <div class="footer__section-link">Higher risk clients fees</div>
-          <div class="footer__section-link">Help</div>
+          <a href="https://ge.mba/personal-account" class="footer__section-link">Account</a>
+          <a href="https://ge.mba/personal-fees" class="footer__section-link">Personal Fees</a>
+          <a href="https://ge.mba/higher-risk-clients-fees" class="footer__section-link">Higher risk clients fees</a>
+          <a href="https://ge.mba/help" class="footer__section-link">Help</a>
         </div>
         <div class="footer__section">
           <div class="footer__section-title">Business</div>
-          <div class="footer__section-link">Business Account</div>
-          <div class="footer__section-link">Corporate Fees</div>
-          <div class="footer__section-link">Higher risk clients fees</div>
-          <div class="footer__section-link">Escrow</div>
-          <div class="footer__section-link">Payments</div>
-          <div class="footer__section-link">Eligibility</div>
-          <div class="footer__section-link">How to apply</div>
-          <div class="footer__section-link">Help</div>
+          <a href="https://ge.mba/business-account" class="footer__section-link">Account</a>
+          <a href="https://ge.mba/corporate-fees" class="footer__section-link">Corporate Fees</a>
+          <a href="https://ge.mba/higher-risk-clients-fees" class="footer__section-link">Higher risk clients fees</a>
+          <a href="https://ge.mba/escrow" class="footer__section-link">Escrow</a>
+          <a href="https://ge.mba/payments" class="footer__section-link">Payments</a>
+          <a href="https://ge.mba/eligibility" class="footer__section-link">Eligibility</a>
+          <a href="https://ge.mba/how-to-apply" class="footer__section-link">How to apply</a>
+          <a href="https://ge.mba/help" class="footer__section-link">Help</a>
         </div>
         <div class="footer__section">
           <div class="footer__section-title">Embedded banking</div>
-          <div class="footer__section-link">How it works</div>
-          <div class="footer__section-link">Payment accounts via API</div>
-          <div class="footer__section-link">Features</div>
-          <div class="footer__section-link">Use cases</div>
-          <div class="footer__section-link">WhiteLabel Setup Guide</div>
+          <a href="https://ge.mba/how-it-works" class="footer__section-link">How it works</a>
+          <a href="https://ge.mba/payment-accounts-api" class="footer__section-link">Payment accounts via API</a>
+          <a href="https://ge.mba/features" class="footer__section-link">Features</a>
+          <a href="https://ge.mba/use-cases" class="footer__section-link">Use cases</a>
+          <a href="https://ge.mba/whitelabel-setup-guide" class="footer__section-link">WhiteLabel Setup Guide</a>
         </div>
         <div class="footer__section">
           <div class="footer__section-title">Company</div>
-          <div class="footer__section-link">About Gemba</div>
-          <div class="footer__section-link">Team</div>
-          <div class="footer__section-link">News</div>
-          <div class="footer__section-link">Cookie Policy</div>
-          <div class="footer__section-link">Privacy policy</div>
-          <div class="footer__section-link">General Terms & Conditions</div>
-          <div class="footer__section-link">Rules for complaints</div>
-          <div class="footer__section-link">Onboarding checklist</div>
-          <div class="footer__section-link">Document archive</div>
-          <div class="footer__section-link">API reference</div>
-          <div class="footer__section-link">Investor dashboard</div>
-          <div class="footer__section-link">Gemba status</div>
-          <div class="footer__section-link">Contact us</div>
+          <a href="https://ge.mba/about" class="footer__section-link">About Gemba</a>
+          <a href="https://ge.mba/team" class="footer__section-link">Team</a>
+          <a href="https://ge.mba/news" class="footer__section-link">News</a>
+          <a href="https://ge.mba/cookie-policy" class="footer__section-link">Cookie Policy</a>
+          <a href="https://ge.mba/privacy-policy" class="footer__section-link">Privacy policy</a>
+          <a href="https://ge.mba/general-terms" class="footer__section-link">General Terms & Conditions</a>
+          <a href="https://ge.mba/rules-for-complaints" class="footer__section-link">Rules for complaints</a>
+          <a href="https://ge.mba/onboarding-checklist" class="footer__section-link">Onboarding checklist</a>
+          <a href="https://ge.mba/document-archive" class="footer__section-link">Document archive</a>
+          <a href="https://ge.mba/api-reference" class="footer__section-link">API reference</a>
+          <a href="https://ge.mba/investor-dashboard" class="footer__section-link">Investor dashboard</a>
+          <a href="https://ge.mba/gemba-status" class="footer__section-link">Gemba status</a>
+          <a href="https://ge.mba/contact-us" class="footer__section-link">Contact us</a>
         </div>
       </div>
       <div class="footer__bottom">
         <div class="footer__bottom-section">
           © GEMBA 2024. All rights reserved | Authorised and regulated by the<br>
-          Financial Conduct Authority (Reference number: 804853)
+          Financial Conduct Authority (Reference number: <a href="https://go.ge.mba/license" class="footer__section-link">804853</a>)
         </div>
         <div class="footer__bottom-section">
           Gemba Finance Ltd. Level 39, 1 Canada Square, Canary Wharf, London, E14 5AB, UK<br>
-          Contact form: reception@ge.mba
+          Contact form: <a href="mailto:reception@ge.mba" class="footer__section-link">reception@ge.mba</a>
         </div>
       </div>
       <div class="footer__certs-block">
@@ -405,5 +416,19 @@
       </div>
     </div>
   </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('scroll-to-contact');
+    var section = document.getElementById('contact-form-section');
+    var input = document.getElementById('contact-form-name');
+    if (btn && section && input) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(function() { input.focus(); }, 600);
+      });
+    }
+  });
+</script>
 </body>
 </html> 
